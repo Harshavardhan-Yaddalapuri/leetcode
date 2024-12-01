@@ -2,7 +2,6 @@ package leetcode.arrays;
 
 public class ShortestSubarrayToMakeSorted {
     public int findLengthOfShortestSubarray(int[] arr) {
-//        int shortest_window = 0;
         int current_window = 0;
         int left = 0, right = 1;
         int prefix = 0;
@@ -20,9 +19,6 @@ public class ShortestSubarrayToMakeSorted {
                 right++;
             }
 
-//            if(prefix <= postfix){
-//                shortest_window = Math.min(shortest_window, current_window);
-//            }
         }
         return current_window;
     }
