@@ -1,9 +1,10 @@
+package leetcode.arrays;
+
 import java.util.Arrays;
 
 public class MissingNumber {
-
     int missingNumber(int arr[]) {
-        // code here
+/*        *//* Inefficient approach Time -> O(n log n) and space O(1) *//*
         int n = arr.length;
         int i;
         Arrays.sort(arr);
@@ -12,7 +13,15 @@ public class MissingNumber {
                 break;
             }
         }
-        return i;
+        return i; */
+
+        /* Efficient approach Time -> O(n) and space O(1) */
+        int n = arr.length;
+        int sum = n * (n + 1) / 2;
+        for (int i : arr) {
+            sum -= i;
+        }
+        return sum;
     }
 
     public static void main(String[] args) {
