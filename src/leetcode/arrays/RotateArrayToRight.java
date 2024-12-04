@@ -1,4 +1,4 @@
-package leetcode;
+package leetcode.arrays;
 
 public class RotateArrayToRight {
     public void rotate(int[] nums, int k) {
